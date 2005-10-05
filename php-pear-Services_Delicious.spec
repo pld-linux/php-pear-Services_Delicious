@@ -9,7 +9,7 @@ Summary(pl):	%{_pearname} - Klient sieciowej us³ugi del.icio.us
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
 %define	_beta beta
-%define	_rel 0.2
+%define	_rel 1
 Release:	2.%{_beta}.%{_rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
