@@ -16,6 +16,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_beta}.tgz
 # Source0-md5:	a1389b7c3f67dfd15169377f6b78c6fa
 URL:		http://pear.php.net/package/Services_Delicious/
+BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 Requires:	php-pear-HTTP_Client
