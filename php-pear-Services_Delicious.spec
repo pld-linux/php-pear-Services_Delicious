@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 %define	_beta beta
-%define	_rel 1
+%define	_rel 2
 Summary:	%{_pearname} - Client for the del.icio.us web service
 Summary(pl):	%{_pearname} - Klient sieciowej us³ugi del.icio.us
 Name:		php-pear-%{_pearname}
