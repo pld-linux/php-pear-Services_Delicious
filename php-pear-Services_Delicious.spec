@@ -4,17 +4,15 @@
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
-%define	_beta beta
-%define	_rel 2
 Summary:	%{_pearname} - Client for the del.icio.us web service
 Summary(pl):	%{_pearname} - Klient sieciowej us³ugi del.icio.us
 Name:		php-pear-%{_pearname}
-Version:	0.2.0
-Release:	2.%{_beta}.%{_rel}
+Version:	0.3.0
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_beta}.tgz
-# Source0-md5:	a1389b7c3f67dfd15169377f6b78c6fa
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	a0c3368027ff29d84a194532c2e2900a
 URL:		http://pear.php.net/package/Services_Delicious/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
