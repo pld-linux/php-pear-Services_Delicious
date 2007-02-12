@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - Client for the del.icio.us web service
-Summary(pl):	%{_pearname} - Klient sieciowej us≥ugi del.icio.us
+Summary(pl.UTF-8):   %{_pearname} - Klient sieciowej us≈Çugi del.icio.us
 Name:		php-pear-%{_pearname}
 Version:	0.5.0
 Release:	1
@@ -39,17 +39,17 @@ from any PHP script.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Servies_Delicious jest klientem opartej na REST us≥udze sieciowej
+%description -l pl.UTF-8
+Servies_Delicious jest klientem opartej na REST us≈Çudze sieciowej
 del.icio.us.
 
-del.icio.us jest spo≥ecznym zarz±dc± zak≥adek. Pozwala na ≥atwe
-dodawanie stron do osobistej kolekcji odno∂nikÛw, klasyfikowanie stron
-wed≥ug s≥Ûw kluczowych, oraz dzielenie siÍ kolekcj± nie tylko z
-rÛønymi przegl±darkami na rÛønych maszynach, ale takøe z innymi
+del.icio.us jest spo≈Çecznym zarzƒÖdcƒÖ zak≈Çadek. Pozwala na ≈Çatwe
+dodawanie stron do osobistej kolekcji odno≈õnik√≥w, klasyfikowanie stron
+wed≈Çug s≈Ç√≥w kluczowych, oraz dzielenie siƒô kolekcjƒÖ nie tylko z
+r√≥≈ºnymi przeglƒÖdarkami na r√≥≈ºnych maszynach, ale tak≈ºe z innymi
 osobami.
 
-Services_Delicious pozwala na wybÛr, dodanie oraz usuwanie zak≥adek z
+Services_Delicious pozwala na wyb√≥r, dodanie oraz usuwanie zak≈Çadek z
 poziomu skryptu PHP.
 
 Ta klasa ma w PEAR status: %{_status}.
