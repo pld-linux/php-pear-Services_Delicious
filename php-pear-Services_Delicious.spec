@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - Client for the del.icio.us web service
-Summary(pl.UTF-8):   %{_pearname} - Klient sieciowej usługi del.icio.us
+Summary(pl.UTF-8):	%{_pearname} - Klient sieciowej usługi del.icio.us
 Name:		php-pear-%{_pearname}
 Version:	0.5.0
 Release:	1
