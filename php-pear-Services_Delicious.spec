@@ -1,25 +1,23 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Services
-%define		_subclass	Delicious
 %define		_status		beta
-%define		_pearname	%{_class}_%{_subclass}
+%define		_pearname	Services_Delicious
 Summary:	%{_pearname} - Client for the del.icio.us web service
 Summary(pl.UTF-8):	%{_pearname} - Klient sieciowej usługi del.icio.us
 Name:		php-pear-%{_pearname}
-Version:	0.5.0
-Release:	3
+Version:	0.6.0
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	78ee07f4ffd9e49db023d85af9604a72
+# Source0-md5:	4990d978afed077bf6132e64dcade508
 URL:		http://pear.php.net/package/Services_Delicious/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-openssl
 Requires:	php-pear
 Requires:	php-pear-HTTP_Client
-Requires:	php-pear-HTTP_Request
+Requires:	php-pear-HTTP_Request2
 Requires:	php-pear-PEAR-core
 Requires:	php-pear-XML_Serializer >= 0.12.0
 BuildArch:	noarch
@@ -57,10 +55,18 @@ Ta klasa ma w PEAR status: %{_status}.
 %prep
 %pear_package_setup
 
+mv docs/Services_Delicious/examples .
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
+
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
+# tests should not be packaged
+rm -rf $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -68,6 +74,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc install.log
-%doc docs/%{_pearname}/*
+%doc docs/%{_pearname}/docs/*
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
+%{php_pear_dir}/Services/Delicious.php
+
+%{_examplesdir}/%{name}-%{version}
