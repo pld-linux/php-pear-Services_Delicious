@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		beta
 %define		_pearname	Services_Delicious
 Summary:	%{_pearname} - Client for the del.icio.us web service
